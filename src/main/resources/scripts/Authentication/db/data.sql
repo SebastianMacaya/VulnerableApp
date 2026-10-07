@@ -5,7 +5,7 @@ INSERT INTO auth_users VALUES (1, 'admin_sqli', '$2y$12$PKD/mq88dHD9PkMU4.w3Lesw
 INSERT INTO auth_users VALUES (2, 'admin_logs', '$2y$12$sdgvxyIsX8rjK7vgeYXiwearsPWjT00ez93a31AreFR/zIDQJhh62', NULL, 'BCRYPT', 2, 'admin_logs@example.com', 'ADMIN');
 
 -- Level 3: Rotated BCrypt credential; no plaintext storage
-INSERT INTO auth_users VALUES (3, 'admin_plain', '$2y$12$hJ48ldxYenQLKnvFJSR3cef1ZSvVE/qGq1FNz8T5dVWewFwZl9lG2', NULL, 'BCRYPT', 3, 'admin_plain@example.com', 'ADMIN');
+INSERT INTO auth_users VALUES (3, 'admin_plain', '$2y$12$UF2wGuQvfe6la7/h4iL15Oq7aWpNi66EF3S8uqxulu2aFMGcqtaAG', NULL, 'BCRYPT', 3, 'admin_plain@example.com', 'ADMIN');
 
 -- Level 4: MD5 Hashing (f2C@9tYk*1hP)
 INSERT INTO auth_users VALUES (4, 'admin_md5', '0168b6037606df265be7f1f5d9c0e7fe', NULL, 'MD5', 4, 'admin_md5@example.com', 'ADMIN');
