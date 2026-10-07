@@ -10,6 +10,6 @@ CREATE TABLE IF NOT EXISTS cryptographic_failures_vault (
 -- Application user has full access (for functional purposes)
 GRANT ALL ON cryptographic_failures_vault TO application;
 
--- A read-only user for exploration by the attacker/user
-CREATE USER IF NOT EXISTS cryptographic_failures_user PASSWORD 'cryptographic_failures_password';
-GRANT SELECT ON cryptographic_failures_vault TO cryptographic_failures_user;
+-- Remove the former public account when upgrading an existing database. Keeping it would expose
+-- password hashes for offline guessing even after the vault switches to adaptive hashing.
+DROP USER IF EXISTS cryptographic_failures_user;
